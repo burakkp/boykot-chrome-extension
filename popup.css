@@ -1,0 +1,90 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    width: 300px;
+  }
+  
+  .header {
+    background-color: #ff4444;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  .content p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  #aktifSite {
+    background-color: #ffe6e6;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  #guncelleBtn, #listeBtn {
+    background-color: #ff4444;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #guncelleBtn:hover, #listeBtn:hover {
+    background-color: #cc3333;
+  }
+  
+  #sonGuncelleme {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .firma-listesi {
+    margin-top: 15px;
+  }
+  
+  .firma-listesi h3 {
+    font-size: 16px;
+    color: #ff4444;
+    margin: 10px 0 5px;
+  }
+  
+  .firma-listesi h4 {
+    font-size: 14px;
+    color: #333;
+    margin: 8px 0 4px;
+  }
+  
+  .firma-listesi ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .firma-listesi li {
+    margin: 5px 0;
+    padding: 8px;
+    background-color: #ffe6e6;
+    border-radius: 4px;
+    font-size: 13px;
+    border-left: 4px solid #ff4444;
+  }

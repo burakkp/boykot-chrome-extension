@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Boykot Firma Tespit Eklentisi",
+    "author": "Burak Kucukparmaksiz",
+    "version": "1.2",
+    "description": "Belirtilen firmaların sitelerini tespit eder ve bildirim gösterir.",
+    "permissions": [
+      "activeTab",
+      "notifications",
+      "webNavigation",
+      "storage",
+      "tabs",
+      "https://burakkp.github.io/boykot-firma-listesi/*",
+      "https://www.google-analytics.com/*",
+      "https://www.google-analytics.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "48": "icon48.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon48.png"
+      }
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }

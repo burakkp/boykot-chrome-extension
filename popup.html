@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boykot edilecek Firma Tespit Eklentisi</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">Boykot edilecek Firma Tespit Eklentisi</div>
+  <div class="content">
+    <p>Bu eklenti, belirtilen firmaların sitelerini tespit eder ve bildirim gösterir.</p>
+    <p id="aktifSite">Aktif site: Tespit ediliyor...</p>
+    <div class="button-group">
+        <button id="guncelleBtn">Listeyi Güncelle</button>
+        <button id="listeBtn">Tüm Listeyi Göster</button>
+      </div>
+    <p id="sonGuncelleme">Son Güncelleme: Yükleniyor...</p>
+    <div id="firmaListesi" class="firma-listesi"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
