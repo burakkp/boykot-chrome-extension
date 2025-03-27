@@ -1,90 +1,202 @@
+/* Genel Stil */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    color: #333;
-    margin: 0;
-    width: 300px;
-  }
-  
-  .header {
-    background-color: #ff4444;
-    color: #fff;
-    padding: 12px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .content {
-    padding: 15px;
-  }
-  
-  .content p {
-    margin: 10px 0;
-    font-size: 14px;
-  }
-  
-  #aktifSite {
-    background-color: #ffe6e6;
-    padding: 8px;
-    border-radius: 4px;
-    font-weight: 500;
-  }
-  
-  .button-group {
-    display: flex;
-    gap: 10px;
-    margin: 10px 0;
-  }
-  
-  #guncelleBtn, #listeBtn {
-    background-color: #ff4444;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #guncelleBtn:hover, #listeBtn:hover {
-    background-color: #cc3333;
-  }
-  
-  #sonGuncelleme {
-    font-size: 12px;
-    color: #666;
-  }
-  
-  .firma-listesi {
-    margin-top: 15px;
-  }
-  
-  .firma-listesi h3 {
-    font-size: 16px;
-    color: #ff4444;
-    margin: 10px 0 5px;
-  }
-  
-  .firma-listesi h4 {
-    font-size: 14px;
-    color: #333;
-    margin: 8px 0 4px;
-  }
-  
-  .firma-listesi ul {
-    list-style-type: none;
-    padding: 0;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-  
-  .firma-listesi li {
-    margin: 5px 0;
-    padding: 8px;
-    background-color: #ffe6e6;
-    border-radius: 4px;
-    font-size: 13px;
-    border-left: 4px solid #ff4444;
-  }
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 350px; /* Popup genişliği */
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık */
+.header {
+  background-color: #ff3300;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* İçerik Alanı */
+.content {
+  padding: 16px;
+}
+
+/* Açıklama Metni */
+.description {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+/* Aktif Site */
+.active-site {
+  font-size: 14px;
+  color: #343a40;
+  background-color: #e9ecef;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Buton Grubu */
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background-color: #ff3300;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #f7603b;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Son Güncelleme */
+.last-updated {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+/* Firma Listesi */
+.firma-listesi {
+  max-height: 300px; /* Liste için maksimum yükseklik */
+  overflow-y: auto; /* Kaydırılabilir */
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Tepe Firma Başlığı */
+.ana-baslik h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff3300;
+  margin: 0;
+}
+
+/* Kategori Başlığı */
+.kategori-baslik h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #343a40;
+  margin: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #dee2e6; /* Alt çizgi */
+  position: relative;
+  cursor: pointer;
+}
+
+.kategori-baslik h4::before {
+  content: '\f07b'; /* Font Awesome folder icon */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 8px;
+  color: #e24a4a;
+  font-size: 14px;
+}
+
+/* Açılır/Kapanır İçerik */
+.accordion-content {
+  transition: all 0.3s ease;
+}
+
+/* Firma Listesi */
+.firma-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Firma Adı */
+.firma-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #343a40;
+  margin-bottom: 4px;
+  padding-left: 15px;
+}
+
+/* Detay Listesi */
+.details-list {
+  list-style-type: none;
+  padding-left: 16px;
+  margin: 0;
+}
+
+/* Detay Elemanları */
+.details-list li {
+  font-size: 13px;
+  color: #495057;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Font Awesome Simgeleri */
+.details-list i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Platform Bazlı Renkler */
+.details-list li:nth-child(1) i { /* Web */
+  color: #ff3300;
+}
+.details-list li:nth-child(2) i { /* Twitter/X */
+  color: #121213;
+}
+.details-list li:nth-child(3) i { /* Instagram */
+  color: #e1306c;
+}
+.details-list li:nth-child(4) i { /* Facebook */
+  color: #0a255c;
+}
+
+/* Kaydırma Çubuğu Stili */
+.firma-listesi::-webkit-scrollbar {
+  width: 6px;
+}
+
+.firma-listesi::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.firma-listesi::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 4px;
+}
+
+.firma-listesi::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+}
